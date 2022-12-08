@@ -19,6 +19,7 @@
 @import "../sections/BannerSection.css";
 @import "../sections/FlashSaleSection.css";
 @import "../sections/ShowCaseSection.css";
+@import "../sections//ShoppingCart.css";
 
 /* Components */
 @import "../components/Cards.css";

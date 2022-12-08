@@ -1,17 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import { currencyFormatter } from '../utilities/CurrencyFormatter'
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, item}) => {
 
-    const addToWishList = (e) => {
-        console.log(`${e.target} added to wishlist`)
-    }
-    const addToCompare = (e) => {
-        console.log("Added to wishlist")
-    }
-    const addToShoppingCart = (e) => {
-        console.log("Added to wishlist")
-    }
+    const { incrementQuantity } = useShoppingCart()
 
 
 
@@ -22,13 +16,13 @@ const ProductCard = ({product}) => {
             <div className="card-box">
                 <img src={product.imageName} alt="Nothing here..." />
                 <div className="card-interaction">
-                    <button onClick={addToWishList} className="card-balls"><i className="fa-regular fa-heart"></i></button>
-                    <button onClick={addToCompare} className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
-                    <button onClick={addToShoppingCart} className="card-balls"><i className="fa-regular fa-bag-shopping"></i></button>
+                    <button className="card-balls"><i className="fa-regular fa-heart"></i></button>
+                    <button className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
+                    <button onClick={() => incrementQuantity ({articleNumber: product.articleNumber, product: product})} className="card-balls"><i className="fa-regular fa-bag-shopping"></i></button>
                 </div>
 
                 <div className="card-quick-view">
-                    <NavLink to={`/products/${product.name.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme-red">
+                    <NavLink to={`/products/${product.articleNumber}`} className="btn-theme-red">
                         <div className="line-button-l-1"></div>
                         <div className="line-button-l-2"></div>
                         <p>QUICK VIEW</p>
@@ -48,7 +42,7 @@ const ProductCard = ({product}) => {
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
                 </div>
-                <h2><span>{product.oldPrice}</span> {product.price}</h2>
+                <h2><span>{product.oldPrice}</span>{currencyFormatter(product.price)}</h2>
             </div>
         </div> 
 

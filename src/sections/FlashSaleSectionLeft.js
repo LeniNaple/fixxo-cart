@@ -1,10 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useEffect } from 'react'
 import ProductGridSection from './ProductGridSection'
-import { GridProductsContext } from '../contexts/contexts' 
+import { useProductContext } from '../contexts/ProductContext'
 import { NavLink } from 'react-router-dom'
 
 const FlashSaleSectionLeft = ({btnTitle}) => {
-    const gridProducts = useContext(GridProductsContext)
+    const {flash, getFlash} = useProductContext()
+
+    useEffect (() => {
+        getFlash(4)
+      }, [])
 
   return (
     <section className="flash-sale-left container">
@@ -19,7 +23,7 @@ const FlashSaleSectionLeft = ({btnTitle}) => {
             </NavLink>
         </div>
         <div className="two-for-right">
-            <ProductGridSection items={gridProducts} />
+            <ProductGridSection items={flash} />
         </div>
     </section>
   )

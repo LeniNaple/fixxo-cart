@@ -1,30 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
+import BreadCrumbSection from '../sections/BreadCrumbSection'
+import ProductDetails from '../sections/ProductDetails'
 
+const ProductDetailsView = () => {
+  const {id} = useParams()
+  const [product, setProduct] = useState({})
 
-
-const ProductsDetailsView = () => {
-
-  window.top.document.title = 'Product / Fixxo'
-
-  const params = useParams()
-
-
-
+  useEffect(() => {
+      const fetchData = async () => {
+          const result = await fetch(`https://win22-webapi.azurewebsites.net/api/products/${id}`)
+          setProduct(await result.json())
+      }
+      fetchData()
+  }, [id])
 
   return (
+  <>
+      <MainMenuSection />
+      <BreadCrumbSection currentPage="Products" />
+      <ProductDetails product={product} />
+      <FooterSection />
+  </>
+)}
 
-    <>
-        <MainMenuSection />
-        <div className='container mt-5 d-flex justify-content-center'>
-            <h1> {params.productName} </h1>
-        </div>
-        <FooterSection />
-    </>
-
-  )
-}
-
-export default ProductsDetailsView
+export default ProductDetailsView

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useEffect } from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import ProductGridSection from '../sections/ProductGridSection'
-import { GridProductsContext, FeaturedProductsContext } from '../contexts/contexts'
+import { useProductContext } from '../contexts/ProductContext'
 import ContactSection from '../sections/ContactSection'
 import BannerSection from '../sections/BannerSection'
 import FlashSaleSectionLeft from '../sections/FlashSaleSectionLeft'
@@ -10,10 +10,16 @@ import FlashSaleSectionRight from '../sections/FlashSaleSectionRight'
 import ShowcaseSection from '../sections/ShowcaseSection'
 
 const HomeView = () => {
-  const gridProducts = useContext(GridProductsContext)
-  const featuredProducts = useContext(FeaturedProductsContext)
+  const {featured, getFeatured} = useProductContext()
+  const {flash, getFlash} = useProductContext()
 
-  window.top.document.title = 'Home / Fixxo'
+  window.top.document.title = 'Fixxo.'
+
+  useEffect (() => {
+    getFeatured(8)
+    getFlash(4)
+  }, [])
+
 
   return (
     <>
@@ -21,10 +27,10 @@ const HomeView = () => {
         <MainMenuSection /> 
         <ShowcaseSection />
       </div> 
-      <ProductGridSection title="Featured Products" items={featuredProducts} />
+      <ProductGridSection title="Featured Products" items={featured} />
       <BannerSection />
-      <FlashSaleSectionLeft btnTitle="FLASH SALE" items={gridProducts} />
-      <FlashSaleSectionRight btnTitle="FLASH SALE" items={gridProducts} />
+      <FlashSaleSectionLeft btnTitle="FLASH SALE" items={flash} />
+      <FlashSaleSectionRight btnTitle="FLASH SALE" items={flash} />
       <ContactSection />
       <FooterSection />
     </>

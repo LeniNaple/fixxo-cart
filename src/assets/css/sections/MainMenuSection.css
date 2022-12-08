@@ -177,3 +177,10 @@
                 background-color: var(--color-dark);
             }
 }
+
+
+
+
+button {
+    border: none;
+}
