@@ -1,0 +1,107 @@
+.flash-sale-left {
+    display: flex;
+    gap: 30px;
+    margin-top: 65px;
+}
+
+/* Visuals of the gray box, which purpose it now has...  */
+    .flash-sale-left .two-for-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-gray-3);
+    }
+        .flash-sale-left .two-for-left h1{
+            font-weight: var(--font-weight-bold) ;
+            font-size: 45px;
+            color: var(--color-white);
+            margin-bottom: 40px;
+        }
+    .flash-sale-left .two-for-right {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+
+/* Extra adjustmens for grid layout... */
+    .flash-sale-left .two-for-right .product-grid {
+        margin: 0; 
+    }
+        .flash-sale-left .two-for-right .product-grid .container {
+            padding: 0;
+            margin-top: -30px;
+        }
+            .flash-sale-left .two-for-right .product-grid .grid {
+                justify-content: start; 
+                height: 100%;
+                padding-right: 20px;
+            }
+
+                
+
+.flash-sale-right {
+    display: flex;
+    gap: 30px;
+    margin-top: 65px;
+}
+    .flash-sale-right .two-for-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-gray-3);
+    }
+        .flash-sale-right .two-for-left h1{
+            font-weight: var(--font-weight-bold) ;
+            font-size: 45px;
+            color: var(--color-white);
+            margin-bottom: 40px;
+        }
+    .flash-sale-right .two-for-right {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+ /* Extra adjustmens for grid layout... */
+    .flash-sale-right .two-for-right .product-grid {
+        margin: 0; 
+    }
+        .flash-sale-right .two-for-right .product-grid .container {
+            padding: 0;
+            margin-top: -30px;
+        }
+            .flash-sale-right .two-for-right .product-grid .grid {
+                justify-content: end; 
+                height: 100%;
+                padding-left: 20px;
+            }
+
+
+
+/* The ugly direction of text on cards...  */
+.flash-sale-right .two-for-right .grid .card .card-text {
+    justify-content: start;
+    align-items: start;
+}
+    .flash-sale-right .two-for-right .grid .card .card-text .card-stars {
+        margin-left: -4px;
+    }
+
+.flash-sale-left .two-for-right .grid .card .card-text {
+    justify-content: start;
+    align-items: start;
+}
+    .flash-sale-left .two-for-right .grid .card .card-text .card-stars {
+        margin-left: -4px;
+    }

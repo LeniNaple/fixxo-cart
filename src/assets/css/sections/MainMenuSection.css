@@ -1,0 +1,179 @@
+.mainmenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo menuLinks menuIcons";
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: var(--font-poppins);
+}
+    .mainmenu .active-button {
+        display: flex;
+    }
+    .mainmenu .logo {
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--color-dark);
+        transition: 200ms ease-in-out;
+        text-decoration: none;
+        grid-area: logo;
+    }
+        .mainmenu .logo:hover {
+            color: var(--color-theme-red);
+        }
+    .mainmenu .menu-links {
+        font-weight: 500;
+        justify-content: center;
+        transition: color 200ms ease-in-out;
+        grid-area: menuLinks;
+        text-align: center;
+    }
+        .mainmenu .menu-links .menu-link {
+            margin-left: 15px;
+            margin-right: 15px;
+            color: var(--color-dark);
+            text-decoration: none;
+            transition: color 200ms ease-in-out;
+        }
+        .mainmenu .menu-links .menu-link:hover {
+            color: var(--color-theme-red);
+            text-decoration: none;
+        }
+        .mainmenu .menu-links .active {
+            color: var(--color-theme-red);
+            text-decoration: none;
+        }
+    .mainmenu .menu-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;  
+        grid-area: menuIcons;
+    }
+        .mainmenu .menu-icons .menu-icon {
+            margin-left: 20px;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            color: var(--color-dark);
+            background-color: var(--color-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 6px 4px var(--color-shadow);
+            transition: 250ms ease-in-out;
+            position: relative;
+        }
+            .mainmenu .menu-icons .menu-icon:hover {
+                text-decoration: none;
+                color: var(--color-white);
+                background-color: var(--color-dark);
+            }
+            .mainmenu .menu-icons .active {
+                background-color: var(--color-theme-red);
+                text-decoration: none;
+            }
+            .mainmenu .menu-icons .active span {
+                border: 1px solid var(--color-white);
+            }
+    .mainmenu .btn-menu-icon {
+        display: none;
+    }
+
+
+@media (max-width: 992px) {
+   
+    .mainmenu {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "logo menuIcons"
+                             "menuLinks menuLinks";
+    }
+        .mainmenu .logo {
+            display: flex;
+            justify-content: flex-start;
+        }
+        .mainmenu .menu-links {
+            display: flex;
+            justify-content: space-between;
+        }
+        .mainmenu .active-button {
+            display: flex;
+            justify-content: space-between;
+        }
+        .mainmenu .menu-icons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+            .mainmenu .menu-icons .menu-icon {
+                margin-left: 15px;
+                margin-right: 15px; 
+            }
+}
+
+
+@media (max-width: 420px) {
+
+    .mainmenu {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        grid-template-areas:"logo"
+                            "menuIcons"
+                            "btnMenuIcon"
+                            "menuLinks";
+    }
+        .mainmenu .menu-icons {
+            justify-content: center;
+        }
+        .mainmenu .logo {
+            margin-bottom: 0;
+            font-size: 50px;
+            justify-content: center;
+        }
+        .mainmenu .menu-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            background-color: var(--color-shadow);
+            border-radius: 15px;
+            padding-bottom: 10px;
+            margin: 0 30px;
+        }
+            .mainmenu .menu-links .menu-link {
+                width: 100%;
+                margin: 10px 0 0 0;
+            }
+        .mainmenu .active-button {
+            display: none;
+        }
+        .mainmenu .btn-menu-icon {
+            display: flex;
+            grid-area: btnMenuIcon;
+            border-radius: 10px;
+            color: var(--color-dark);
+            background-color: var(--color-white);
+            border: none;
+            box-shadow: 0 0 6px 4px var(--color-shadow);
+            justify-content: center;
+            align-items: center;
+            margin: 10px 30px 0 30px;
+            transition: 250ms ease-in-out;
+        }
+            .mainmenu .btn-menu-icon i {
+                padding: 5px 0 5px 0;
+            }
+            .mainmenu .btn-menu-icon i span {
+                font-family: var(--font-poppins);
+            }
+            .mainmenu .btn-menu-icon:hover {
+                color: var(--color-white);
+                background-color: var(--color-dark);
+            }
+}

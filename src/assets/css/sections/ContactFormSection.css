@@ -1,0 +1,79 @@
+.contact-form {
+    margin-bottom: 60px;
+}
+    .contact-form .container {
+        max-width: 1110px;
+        justify-content: center;
+    }
+        .contact-form h2 {
+            font-size: var(--font-size-18);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 30px;
+        }
+        .contact-form form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+            .contact-form form > div {
+/* positioning of error message */
+                position: relative;
+            }
+                .contact-form form input {
+                    width: 100%;
+                    padding: 18px 20px;
+                    border: 1px solid rgb(97, 99, 101, 0.4);
+                }
+                .contact-form form .textarea {
+                    grid-column: 1/-1;
+                }
+                    .contact-form form textarea {
+                        width: 100%;
+                        padding: 18px 20px;
+                        border: 1px solid rgb(97, 99, 101, 0.4);
+                        min-height: 140px;
+                        resize: none;
+                    }
+/* adds red border to form, if added "error" class to div */
+                .contact-form form .error {
+                    color: var(--color-theme-red);
+                    border: 1px solid var(--color-theme-red);
+                }
+                .contact-form form .errorMessage {
+                    color: var(--color-theme-red);
+                    font-size: 0.8em;
+/* positioning of error message */
+                    position: absolute;
+                    bottom: -20px;
+                }
+        .contact-form .container .submitted-form {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-shadow);
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px 0 20px 0;
+        }
+            .contact-form .container .submitted-form:last-child p {
+                padding-top: 10px;
+            }
+
+
+
+
+
+
+@media (max-width: 575px) {
+    .contact-form .container {
+        text-align: center;
+    }
+        .contact-form form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .contact-form form .btn-theme-contact {
+            width: 100%;  
+        }
+}

@@ -1,0 +1,226 @@
+/* Black button -> red */
+.btn-theme-dark {
+    height: 60px;
+    width: 190px;
+    background-color: var(--color-dark);
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: all 200ms ease-in-out;
+}
+    .btn-theme-dark p {
+        margin: 0;
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-semi-bold);   
+    } 
+        .btn-theme-dark:hover {
+            background-color: var(--color-white);
+            text-decoration: none;
+            color: var(--color-dark);
+        }
+        .btn-theme-dark .line-button-l-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            transition: all 200ms ease-in-out;
+        }
+        .btn-theme-dark .line-button-l-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            height: 20px;
+            transition: all 200ms ease-in-out;
+        }
+        .btn-theme-dark .line-button-r-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+            transition: all 200ms ease-in-out;
+        }
+        .btn-theme-dark .line-button-r-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            height: 20px;
+            transition: all 200ms ease-in-out;
+        }
+            .btn-theme-dark:hover .line-button-l-1 {
+                background-color: var(--color-dark);
+                border: 1px solid var(--color-dark);
+            }
+            .btn-theme-dark:hover .line-button-l-2 {
+                background-color: var(--color-dark);
+                border: 1px solid var(--color-dark);
+            }
+            .btn-theme-dark:hover .line-button-r-1 {
+                background-color: var(--color-dark);
+                border: 1px solid var(--color-dark);
+            }
+            .btn-theme-dark:hover .line-button-r-2 {
+                background-color: var(--color-dark);
+                border: 1px solid var(--color-dark);
+            }
+
+
+/* Red button -> black */
+.btn-theme-red {
+    height: 60px;
+    width: 190px;
+    background-color: var(--color-theme-red);
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: background 200ms ease-in-out;
+}
+    .btn-theme-red p {
+        margin: 0;
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-semi-bold);   
+    } 
+        .btn-theme-red:hover {
+            background-color: var(--color-dark);
+            text-decoration: none;
+            color: var(--color-white);
+        }
+        .btn-theme-red .line-button-l-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            width: 20px;
+        }
+        .btn-theme-red .line-button-l-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            height: 20px;
+        }
+        .btn-theme-red .line-button-r-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+        }
+        .btn-theme-red .line-button-r-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            height: 20px;
+        }
+
+
+/* White button -> black */
+.btn-theme-white {
+    height: 60px;
+    width: 190px;
+    background-color: var(--color-white);
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-font-main);
+    transition: all 200ms ease-in-out;
+}
+    .btn-theme-white p {
+        margin: 0;
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-semi-bold);   
+    } 
+        .btn-theme-white:hover {
+            background-color: var(--color-dark);
+            text-decoration: none;
+            color: var(--color-white);
+        }
+        .btn-theme-white .line-button-l-1 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            transition: all 200ms ease-in-out;
+        }
+        .btn-theme-white .line-button-l-2 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            top: 10px;
+            left: 10px;
+            height: 20px;
+            transition: all 200ms ease-in-out;
+        }
+        .btn-theme-white .line-button-r-1 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+            transition: all 200ms ease-in-out;
+        }
+        .btn-theme-white .line-button-r-2 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            bottom: 10px;
+            right: 10px;
+            height: 20px;
+            transition: all 200ms ease-in-out;
+        }
+            .btn-theme-white:hover .line-button-l-1 {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-white);
+            }
+            .btn-theme-white:hover .line-button-l-2 {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-white);
+            }
+            .btn-theme-white:hover .line-button-r-1 {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-white);
+            }
+            .btn-theme-white:hover .line-button-r-2 {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-white);
+            }
+
+            
+/* Contact button red-> black */
+.btn-theme-contact {
+    position: relative;
+    background-color: var(--color-theme-red);
+    color: var(--color-white);
+    border: none;
+    padding: 15px 50px;
+    font-weight: var(--font-weight-semi-bold);
+    transition: background 200ms ease-in-out;
+}
+    .btn-theme-contact:hover {
+        color: var(--color-white);
+        background-color: var(--color-dark);
+        text-decoration: none;
+    }

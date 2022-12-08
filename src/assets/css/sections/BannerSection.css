@@ -1,0 +1,102 @@
+/* Attributes to BannerSection */
+.banners {
+    display: flex;
+    gap: 30px;
+    margin-top: 65px;
+}
+    .banners .banner-img-left {
+        flex: 1;
+    }
+        .banners .banner-img-left img {
+            width: 100%;
+        }
+    .banners .banner-img-right {
+        flex: 1;
+    } 
+        .banners .banner-img-right img {
+            width: 100%
+        }
+
+
+/* Attributes to Banners left/right */
+    .banner-img-left  {
+        position: relative;
+    }
+        .banner-img-left .banner-text {
+            position: absolute;
+            top: 22%;
+            right: 5%;
+        }
+            .banner-img-left .banner-text h1 {
+                font-weight: var(--font-weight-bold);
+                font-size: 45px;
+                color: var(--color-white);
+            }
+            .banner-img-left .banner-text .btn-theme-dark {
+                margin-top: 35px;
+            }
+    .banner-img-right  {
+        position: relative;
+    }
+        .banner-img-right .banner-text {
+            position: absolute;
+            top: 22%;
+            left: 5%;
+        }
+            .banner-img-right .banner-text h1 {
+                font-weight: var(--font-weight-bold);
+                font-size: 45px;
+                color: var(--color-dark);
+            }
+            .banner-img-right .banner-text .btn-theme-white {
+                margin-top: 35px;
+            }
+
+
+@media (max-width: 1600px) {
+    .banner-img-left .banner-text {
+        top: 20%;
+        right: 7%;
+    }
+        .banner-img-left .banner-text h1 {
+            font-size: 35px;
+        }
+    .banner-img-right .banner-text {
+        top: 20%;
+        right: 7%;
+    }
+        .banner-img-right .banner-text h1 {
+            font-size: 35px;
+        }
+}
+
+@media (max-width: 1200px) {
+    .banner-img-left .banner-text {
+        top: 20%;
+        right: 7%;
+        text-align: end;
+    }
+        .banner-img-left .banner-text h1 {
+            font-size: 20px;
+        }
+        .banner-img-left .banner-text .btn-theme-dark {
+            margin-top: 20px;
+        }
+    .banner-img-right .banner-text {
+        top: 20%;
+        right: 7%;
+        text-align: start;
+    }
+        .banner-img-right .banner-text h1 {
+            font-size: 20px;
+        }
+        .banner-img-right .banner-text .btn-theme-white {
+            margin-top: 20px;
+        }
+}
+
+@media (max-width: 1000px) {
+    .banners {
+        flex-direction: column;
+    }
+}

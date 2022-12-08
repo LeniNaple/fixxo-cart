@@ -1,0 +1,6 @@
+.bg-theme {
+    background-color: var(--color-theme-red);
+}
+.bg-dark {
+    background-color: var(--color-dark) !important;
+}

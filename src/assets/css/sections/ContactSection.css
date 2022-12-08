@@ -1,0 +1,45 @@
+
+.destination-buttons .container {
+    max-width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: rgb(97, 99, 101, 0.4) solid 1px;
+    margin-top: 80px;
+}
+    .destination-buttons .container .support-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .destination-buttons .container .support-buttons a {
+            color: var(--color-dark);
+            background-color: var(--color-white);
+            box-shadow: 0 0 6px 4px var(--color-shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            font-size: 25px;
+            text-decoration: none;
+            transition: all 200ms ease-in-out;
+            margin-top: 60px;
+        }
+            .destination-buttons .container .support-buttons a:hover {
+                color: var(--color-theme-red);
+                background-color: var(--color-dark);
+                text-decoration: none;
+            }
+        .destination-buttons .container .support-buttons h1 {
+            font-weight: var(--font-weight-bold);
+            font-size: 20px;
+            margin: 30px 0 15px 0;
+        }
+        .destination-buttons .container .support-buttons p {
+            font-weight: var(--font-weight-regular);
+            font-size: 16px;
+            color: var(--color-gray-4);
+            margin: 0;
+        }

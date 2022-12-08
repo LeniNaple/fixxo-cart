@@ -1,0 +1,137 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    background-color: var(--color-white);
+    border: none;
+    width: 255px;
+}
+    .card .card-box {
+        height: 210px;
+        width: 100%;
+        background-color: var(--linear-gradient-light);
+        position: relative;
+        overflow: hidden;
+        transition: background 200ms ease-in-out; 
+    }
+    .card .card-box img {
+        width: 100%;
+/* not sure this really does anything because of the set height... */
+        object-fit: cover;
+    }
+    .card:hover .card-box {
+        background-color: var(--color-gray-card);
+    }
+        .card .card-box .card-interaction {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 250px;
+            right: 10px;
+            transition: top 200ms ease-in-out;
+        }
+        .card:hover .card-box .card-interaction {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+            .card .card-box .card-interaction .card-balls {
+                width: 36px;
+                height: 36px;
+                background-color: var(--color-white);
+                border-radius: 50%;
+                margin-bottom: 10px;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 200ms ease-in-out;
+            }
+                .card .card-box .card-interaction .card-balls:hover {
+                    background-color: var(--color-dark);
+                    color: var(--color-white);
+                }
+                .card .card-box .card-interaction .card-balls i {
+                    font-size: var(--font-size-14);
+                }
+        .card .card-box .card-quick-view {
+            position: absolute;
+            bottom: -100px;
+            width: 100%;
+            transition: bottom 200ms ease-in-out;
+        }
+            .card:hover .card-box .card-quick-view {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+            }
+                .card .card-box .card-quick-view .btn-theme-red {
+                    width: 100%;
+                }
+                    .card .card-box .card-quick-view .btn-theme-red p {
+                        font-weight: var(--font-weight-regular);
+                        font-size: var(--font-size-14);
+                    }
+        .card .card-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--color-white);
+            width: 100%;
+            z-index: 1;
+        }
+            .card .card-text p {
+                color: var(--color-gray-4);
+                font-size: var(--font-size-13);
+                font-weight: var(--font-weight-medium);
+                margin-bottom: .2rem;
+                margin-top: .5rem;
+            }
+            .card .card-text h1 {
+                color: var(--color-font-main);
+                font-size: var(--font-size-16);
+                font-weight: var(--font-weight-semi-bold);
+                margin: 0 0 .3rem 0;
+            }
+            .card .card-text .card-stars {
+                color: var(--color-theme-red);
+                margin: 0 0 .2rem 0;
+            }
+                .card .card-text .card-stars i {
+                    margin: 0 0.15rem;
+                }
+            .card .card-text h2 {
+                color: var(--color-font-main);
+                font-size: var(--font-size-18);
+                font-weight: var(--font-weight-semi-bold);
+                margin: 0 0 .3rem 0;
+            }
+            .card .card-text h2 span {
+                color: var(--color-font-main);
+                font-weight: var(--font-weight-regular);
+                font-size: var(--font-size-16);
+                text-decoration: line-through;
+                color: var(--color-gray-4);
+            }
+
+
+@media (max-width: 992px) {
+      
+        .card .card-box .card-quick-view {
+            bottom: 0px;
+        }
+            .card .card-box .card-quick-view .btn-theme-red {
+            background-color: rgba(255, 115, 115, 0.700);
+            }
+        .card .card-box .card-interaction {
+            top: 10px;
+            right: 10px;
+        }
+
+}

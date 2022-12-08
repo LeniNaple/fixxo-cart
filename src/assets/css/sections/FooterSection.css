@@ -1,0 +1,27 @@
+.copyright {
+    background-color: var(--color-gray-5);
+    height: 110px;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: rgb(97, 99, 101, 0.4) solid 1px;
+    margin-top: 70px;
+}
+
+        .copyright .social-media a {
+            font-size: 18px;
+            color: black;
+            padding-left: 10px;
+            padding-right: 10px;   
+            transition: color 100ms ease-in-out;   
+            color: var(--color-dark);  
+        }
+            .copyright .social-media a:hover {
+                color: var(--color-theme-red); 
+            }
+    .copyright p {
+        margin: 10px 0 0 0;
+        color: var(--color-gray-4);  
+    }

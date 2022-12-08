@@ -1,0 +1,36 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Cores */
+@import "../cores/Variables.css";
+@import "../cores/Base.css";
+@import "../cores/Colours.css";
+@import "../cores/Buttons.css";
+
+
+/* Sections */
+@import "../sections/MainMenuSection.css";
+@import "../sections/FooterSection.css";
+@import "../sections/ProductGridSection.css";
+@import "../sections/BreadCrumbSection.css";
+@import "../sections/MapSection.css";
+@import "../sections/ContactFormSection.css";
+@import "../sections/ContactSection.css";
+@import "../sections/BannerSection.css";
+@import "../sections/FlashSaleSection.css";
+@import "../sections/ShowCaseSection.css";
+
+/* Components */
+@import "../components/Cards.css";
+
+
+
+
+
+
+
+
+/* Specific view-attributes */
+.homeView {
+    background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%);
+}

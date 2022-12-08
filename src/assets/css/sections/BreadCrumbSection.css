@@ -1,0 +1,37 @@
+.breadcrumb {
+    margin-top: 10px;
+}
+    .breadcrumb .container {
+        max-width: 1110px;
+    }
+        .breadcrumb .container .breadcrumb-list {
+            list-style: none;
+            margin: 0 0 30px 0;
+            padding: 0;
+            color: var(--color-theme-red);
+        }
+            .breadcrumb .container .breadcrumb-list li {
+                display: inline-block;
+                font-weight: var(--font-weight-medium);  
+            }
+                .breadcrumb .breadcrumb-list li + li:before {
+                    content: "\00a0/\00a0";
+                    font-weight: var(--font-weight-regular);
+                    color: var(--color-dark);
+                    
+                }
+                .breadcrumb .container .breadcrumb-list li a {
+                    color: var(--color-dark);
+                    transition: 200ms ease-in-out;
+                }
+                    .breadcrumb .container .breadcrumb-list li a:hover {
+                        color: var(--color-theme-red);
+                    }
+
+@media (max-width: 420px) {
+    .breadcrumb {
+        display: none;
+    }
+
+
+}

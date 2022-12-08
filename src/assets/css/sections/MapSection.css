@@ -1,0 +1,14 @@
+.google-map {
+    width: 100%;
+    border: none;
+    height: 380px;
+    margin-bottom: 70px;
+}
+
+
+@media (max-width: 575px) {
+    .google-map {
+        height: 250px;
+        margin-bottom: 30px;
+    }
+}

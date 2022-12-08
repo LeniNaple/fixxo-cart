@@ -1,0 +1,24 @@
+html, 
+body {
+    line-height: 1.50;
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-font-main);
+    background-color: var(--color-white);
+    font-size: 16px;
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+    a:hover {
+        color: var(--color-theme-red);
+        text-decoration: none;
+    }
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: var(--max-width);
+    }
+}
